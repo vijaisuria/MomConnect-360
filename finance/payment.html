@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hospital website</title>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- BOXICONS CDN -->
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="../stylem.css" />
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+            <a href="#" class="nav__logo">
+                <h3>Maternal Health Care</h3>
+            </a>
+            <ul id="nav__items">
+                <li><a href="/finance">Home</a></li>
+                <li><a href="mother.html">Mothers</a></li>
+                <li><a href="#specialists">Top Donors</a></li>
+                <li><a href="../viewreport.html" target="_blank">View Report</a></li>
+                <li><a href="../register.html" target="_blank">Registration</a></li>
+                <li><a href="payment.html" class="btn">Donate now!</a></li>
+            </ul>
+            <button id="open__nav-btn"><i class="bx bx-menu"></i></button>
+            <button id="close__nav-btn"><i class="bx bx-x"></i></button>
+        </div>
+    </nav>
+    <!-- ======================== END OF NAV =============================== -->
+    <header>
+        <div class="container">
+            <div class="header__content">
+                <h1>Your Money, Help Mothers!!!</h1>
+                <p>
+                    Welcome to webpage Maternal health care .this web page allows the
+                    hospitals and doctors around the world.This enables the doctor
+                    in remote areas to take necessary precautions and steps
+                    in case of emergency
+                </p>
+            </div>
+            <div class="header__image">
+                <img src="https://media.istockphoto.com/photos/pregnant-woman-and-gynecologist-doctor-at-hospital-picture-id1165979888?b=1&k=20&m=1165979888&s=612x612&w=0&h=2Ed_lSls3oORfJ04xdiYvtpu1RysJtZxbqfDxPUwhP4="
+                    alt="mainimage" />
+            </div>
+        </div>
+    </header>
+
+
+    <section id="appointment">
+        <div class="container">
+            <div class="left">
+                <h2>Donation form</h2>
+                <p> Book your appoinment with the highly experienced doctors.</p>
+                <article>
+                    <div class="icon">
+                        <i class="bx bx-user"></i>
+                    </div>
+                    <div class="description">
+                        <h4>Experienced doctors</h4>
+                        <small>
+                            We have highly qualified and experienced doctor
+                            so that each and every patient would get the best
+                            care possible
+                        </small>
+                    </div>
+                </article>
+                <article>
+                    <div class="icon">
+                        <i class="bx bxs-zap"></i>
+                    </div>
+                    <div class="description">
+                        <h4>Advanced Technology</h4>
+                        <small>
+                            We have various Technology so that we can
+                            provide proper treatment to the patients and
+                            help them in all way possible.
+                        </small>
+                    </div>
+                </article>
+                <article>
+                    <div class="icon">
+                        <i class="bx bx-first-aid"></i>
+                    </div>
+                    <div class="description">
+                        <h4>Emergency Care</h4>
+                        <small>
+                            We provide emergency services for the patients
+                            and we will make sure that by using our services
+                            we can make maternity death rate of world 0.
+
+                        </small>
+                    </div>
+                </article>
+            </div>
+            <form action="https://formspree.io/f/xqknoqdp" method="POST">
+                <div class="form__group">
+                    <label for="name">Name</label>
+                    <input type="text" placeholder="Enter Your Name" name="Patient's Name" id="name" required />
+                </div>
+                <div class="form__group">
+                    <label for="phone">Phone Number</label>
+                    <input type="number" placeholder="Enter Phone Number" name="Phone Number" id="phone" required />
+                </div>
+                <div class="form__group">
+                    <label for="date">Date</label>
+                    <input type="date" placeholder="Choose a Date" name="Date" id="date" required />
+                </div>
+                <div class="form__group">
+                    <label for="department">Select Department</label>
+                    <select name="Department" id="department" required>
+                        <option value="Department One">Department One</option>
+                        <option value="Department Two">Department Two</option>
+                        <option value="Department Three">Department Three</option>
+                        <option value="Department Four">Department Four</option>
+                    </select>
+                </div>
+                <div class="form__group">
+                    <label for="doctor">Select Doctor</label>
+                    <select name="Doctor" id="doctor" required>
+                        <option value="Doctor One">Doctor One</option>
+                        <option value="Doctor Two">Doctor Two</option>
+                        <option value="Doctor Three">Doctor Three</option>
+                        <option value="Doctor Four">Doctor Four</option>
+                    </select>
+                </div>
+                <div class="form__group">
+                    <label for="message">Additional Message</label>
+                    <textarea name="Added Message" id="message" rows="6" placeholder="Add a message"
+                        required></textarea>
+                </div>
+                <input type="submit" value="Submit Request" class="btn-primary" />
+            </form>
+        </div>
+    </section>
+    <!-- ======================== END OF APPOINTMENTS =============================== -->
+    <footer>
+        <div class="container">
+            <article>
+                <h5>Maternal health care.</h5>
+                <p>
+                    we provide best service here .
+                </p>
+                <div>
+                    <i class="bx bxs-phone"></i>
+                    <small>+12324567</small>
+                </div>
+                <div>
+                    <i class="bx bx-mail-send"></i>
+                    <small>support@hospitalwebsite.com</small>
+                </div>
+            </article>
+            <article>
+                <h5>Support</h5>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Cookie Policy</a>
+                <a href="#">Purchasing Policy</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Career</a>
+            </article>
+            <article>
+                <h5>Menu</h5>
+                <a href="#">Home</a>
+                <a href="#">Services</a>
+                <a href="#">Specialists</a>
+                <a href="#">View Report</a>
+                <a href="#">Registration</a>
+                <a href="#" class="btn-primary">Get Appointment</a>
+            </article>
+            <article>
+                <h5>Contact Us</h5>
+                <a href="#">Press</a>
+                <a href="#">FAQs</a>
+                <div class="socials">
+                    <a href="#"><i class="bx bxl-linkedin"></i></a>
+                    <a href="#" <i class="bx bxl-twitter"></i></a>
+                    <a href="#" <i class="bx bxl-facebook"></i></a>
+                    <a href="#" <i class="bx bxl-instagram"></i></a>
+                </div>
+            </article>
+        </div>
+        <div class="copyright">
+            Copyright Maternal health care. All Rights Reserved.
+        </div>
+    </footer>
+    <!-- ======================== END OF FOOTER =============================== -->
+    <script>
+        //get the mother id from the url
+        const urlParams = new URLSearchParams(window.location.search);
+        const motherId = urlParams.get('motherId');
+        console.log(motherId);
+    </script>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Main JS -->
+    <script src="../main.js"></script>
+
+</body>
+
+</html>

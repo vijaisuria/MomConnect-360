@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hospital website</title>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- BOXICONS CDN -->
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="stylem.css" />
+    <style>
+        /* Style the container element */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Style the video cards */
+        .video-card {
+            display: flex;
+            margin-bottom: 20px;
+            height: 315px;
+        }
+
+        .video-card .video-container {
+            width: 560px;
+        }
+
+        .video-card .video-container {
+            position: relative;
+        }
+
+        .video-card .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .video-card .video-description {
+            padding: 20px;
+            border-radius: 5px;
+            background-color: #f8f9fa;
+        }
+
+        /* Responsive styles for smaller screens */
+        @media (max-width: 768px) {
+            .video-card {
+                flex-direction: column;
+            }
+
+            .video-card .video-container {
+                order: 1;
+            }
+
+            .video-card .video-description {
+                order: 2;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+            <a href="#" class="nav__logo">
+                <h3>Maternal Health Care</h3>
+            </a>
+            <ul id="nav__items">
+                <li><a href="/">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#specialists">Specialists</a></li>
+                <li><a href="viewreport.html" target="_blank">View Report </a></li>
+                <li><a href="register.html" target="_blank">Registration</a></li>
+                <li><a href="#appointment" class="btn">Make appointment</a></li>
+            </ul>
+            <button id="open__nav-btn"><i class="bx bx-menu"></i></button>
+            <button id="close__nav-btn"><i class="bx bx-x"></i></button>
+        </div>
+    </nav>
+    <!-- ======================== END OF NAV =============================== -->
+    <header>
+        <div class="container">
+            <div class="header__content">
+                <h1>Maternal Health Videos</h1>
+                <p>
+                    Welcome to webpage Maternal health care .this web page allows the
+                    hospitals and doctors around the world.This enables the doctor
+                    in remote areas to take necessary precautions and steps
+                    in case of emergency
+                </p>
+                <a href="#lesson" class="btn">Watch Lesson</a>
+            </div>
+            <div class="header__image">
+                <img src="https://media.istockphoto.com/photos/pregnant-woman-and-gynecologist-doctor-at-hospital-picture-id1165979888?b=1&k=20&m=1165979888&s=612x612&w=0&h=2Ed_lSls3oORfJ04xdiYvtpu1RysJtZxbqfDxPUwhP4="
+                    alt="mainimage" />
+            </div>
+        </div>
+    </header>
+    <!-- ======================== END OF HEADER =============================== -->
+    <section id="lesson">
+
+        <div class="container">
+            <div class="video-card">
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/D6Fn8SHZ2xc?si=-xXchICwJ47KSzDT"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="video-description">
+                    <h5 class="card-title">Video 1 Description</h5>
+                    <p class="card-text">This video provides an overview of the importance of maternal education and its
+                        impact on child health and development.</p>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/D6Fn8SHZ2xc?si=-xXchICwJ47KSzDT"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="video-description">
+                    <h5 class="card-title">Video 1 Description</h5>
+                    <p class="card-text">This video provides an overview of the importance of maternal education and its
+                        impact on child health and development.</p>
+                </div>
+            </div>
+            <div class="video-card">
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/D6Fn8SHZ2xc?si=-xXchICwJ47KSzDT"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="video-description">
+                    <h5 class="card-title">Video 1 Description</h5>
+                    <p class="card-text">This video provides an overview of the importance of maternal education and its
+                        impact on child health and development.</p>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/D6Fn8SHZ2xc?si=-xXchICwJ47KSzDT"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="video-description">
+                    <h5 class="card-title">Video 1 Description</h5>
+                    <p class="card-text">This video provides an overview of the importance of maternal education and its
+                        impact on child health and development.</p>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/D6Fn8SHZ2xc?si=-xXchICwJ47KSzDT"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="video-description">
+                    <h5 class="card-title">Video 1 Description</h5>
+                    <p class="card-text">This video provides an overview of the importance of maternal education and its
+                        impact on child health and development.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="container">
+            <article>
+                <h5>Maternal health care.</h5>
+                <p>
+                    we provide best service here .
+                </p>
+                <div>
+                    <i class="bx bxs-phone"></i>
+                    <small>+12324567</small>
+                </div>
+                <div>
+                    <i class="bx bx-mail-send"></i>
+                    <small>support@hospitalwebsite.com</small>
+                </div>
+            </article>
+            <article>
+                <h5>Support</h5>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Cookie Policy</a>
+                <a href="#">Purchasing Policy</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Career</a>
+            </article>
+            <article>
+                <h5>Menu</h5>
+                <a href="#">Home</a>
+                <a href="#">Services</a>
+                <a href="#">Specialists</a>
+                <a href="#">View Report</a>
+                <a href="#">Registration</a>
+                <a href="#" class="btn-primary">Get Appointment</a>
+            </article>
+            <article>
+                <h5>Contact Us</h5>
+                <a href="#">Press</a>
+                <a href="#">FAQs</a>
+                <div class="socials">
+                    <a href="#"><i class="bx bxl-linkedin"></i></a>
+                    <a href="#" <i class="bx bxl-twitter"></i></a>
+                    <a href="#" <i class="bx bxl-facebook"></i></a>
+                    <a href="#" <i class="bx bxl-instagram"></i></a>
+                </div>
+            </article>
+        </div>
+        <div class="copyright">
+            Copyright Maternal health care. All Rights Reserved.
+        </div>
+    </footer>
+    <!-- ======================== END OF FOOTER =============================== -->
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Main JS -->
+    <script src="main.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hospital website</title>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- BOXICONS CDN -->
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="../stylem.css" />
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 8px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .action-buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .action-button {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .indo-button {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        .pay-button {
+            background-color: #28a745;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+            <a href="#" class="nav__logo">
+                <h3>Maternal Health Care</h3>
+            </a>
+            <ul id="nav__items">
+                <li><a href="/finance">Home</a></li>
+                <li><a href="mother.html">Mothers</a></li>
+                <li><a href="#specialists">Top Donors</a></li>
+                <li><a href="../viewreport.html" target="_blank">View Report</a></li>
+                <li><a href="../register.html" target="_blank">Registration</a></li>
+                <li><a href="payment.html" class="btn">Donate now!</a></li>
+            </ul>
+            <button id="open__nav-btn"><i class="bx bx-menu"></i></button>
+            <button id="close__nav-btn"><i class="bx bx-x"></i></button>
+        </div>
+    </nav>
+    <!-- ======================== END OF NAV =============================== -->
+    <header>
+        <div class="container">
+            <div class="header__content">
+                <h1>Finance Providers!!!</h1>
+                <p>
+                    Welcome to webpage Maternal health care .this web page allows the
+                    hospitals and doctors around the world.This enables the doctor
+                    in remote areas to take necessary precautions and steps
+                    in case of emergency
+                </p>
+                <a href="#appointment" class="btn">Donate now</a>
+            </div>
+            <div class="header__image">
+                <img src="https://media.istockphoto.com/photos/pregnant-woman-and-gynecologist-doctor-at-hospital-picture-id1165979888?b=1&k=20&m=1165979888&s=612x612&w=0&h=2Ed_lSls3oORfJ04xdiYvtpu1RysJtZxbqfDxPUwhP4="
+                    alt="mainimage" />
+            </div>
+        </div>
+    </header>
+    <!-- ======================== END OF HEADER =============================== -->
+    <section id="services">
+        <h2>Our services</h2>
+        <p>
+            We provide various services so that each and every women get proper
+            health facilities during her maternity.
+        </p>
+        <div class="container">
+            <article>
+                <i class="bx bx-book-content"></i>
+                <div class="description">
+                    <h4>blood pressure</h4>
+                    <small>
+                        As the main reason of most of the maternal death
+                        blood pressure so we provide blood presssure
+                        checking machines and keep a regular check on their functionality.
+                    </small>
+                </div>
+            </article>
+            <article>
+                <i class="bx bx-trophy"></i>
+                <div class="description">
+                    <h4>Qualified Doctors</h4>
+                    <small>
+                        We provide direct contact of all the best doctors from
+                        all over the world which provide direct mentorship to
+                        the doctors in the small hospitals in remote areas.
+                    </small>
+                </div>
+            </article>
+            <article>
+                <i class="bx bx-support"></i>
+                <div class="description">
+                    <h4>Private Support</h4>
+                    <small>
+                        We provide private support to those patients whom
+                        are in critical condition or to the patients which
+                        requires persnal care.
+                    </small>
+                </div>
+            </article>
+            <article>
+                <i class="bx bx-donate-heart"></i>
+                <div class="description">
+                    <h4>Well Cared</h4>
+                    <small>
+                        We focus on the Maternal health of the women
+                        and children and we take care about their health
+                        during and after atleast 6 months of their pregnancy.
+                    </small>
+                </div>
+            </article>
+            <article>
+                <i class="bx bx-first-aid"></i>
+                <div class="description">
+                    <h4>Need Emergency</h4>
+                    <small>
+                        If some patients need emergency care we
+                        provide them transport facilities so that
+                        they can reach to the hospital as soon as possible.
+                    </small>
+                </div>
+            </article>
+            <article>
+                <i class="bx bxl-meta"></i>
+                <div class="description">
+                    <h4>24 hours service</h4>
+                    <small>
+                        We provide 24 hours service for the patients
+                        and make sure that they dont have any health
+                        related problems physically ar mentally.
+                    </small>
+                </div>
+            </article>
+        </div>
+    </section>
+    <!-- ======================== END OF SERVICES =============================== -->
+    <section id="specialists">
+        <h2>Our Top Specialists</h2>
+        <p>
+            We have highly qualified doctors and some of them
+            are mentioned here you can also contact and see about them.
+        </p>
+        <div class="container">
+            <div class="row" style="width: 1000px;">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Finance Agents</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Location</th>
+                            <th>Network</th>
+                        </tr>
+                    </thead>
+                    <tbody id="financeTableBody">
+                        <!-- Table content will be dynamically populated here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    <!-- ======================== END OF SPECIALISTS =============================== -->
+
+    <footer>
+        <div class="container">
+            <article>
+                <h5>Maternal health care.</h5>
+                <p>
+                    we provide best service here .
+                </p>
+                <div>
+                    <i class="bx bxs-phone"></i>
+                    <small>+12324567</small>
+                </div>
+                <div>
+                    <i class="bx bx-mail-send"></i>
+                    <small>support@hospitalwebsite.com</small>
+                </div>
+            </article>
+            <article>
+                <h5>Support</h5>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Cookie Policy</a>
+                <a href="#">Purchasing Policy</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Career</a>
+            </article>
+            <article>
+                <h5>Menu</h5>
+                <a href="#">Home</a>
+                <a href="#">Services</a>
+                <a href="#">Specialists</a>
+                <a href="#">View Report</a>
+                <a href="#">Registration</a>
+                <a href="#" class="btn-primary">Get Appointment</a>
+            </article>
+            <article>
+                <h5>Contact Us</h5>
+                <a href="#">Press</a>
+                <a href="#">FAQs</a>
+                <div class="socials">
+                    <a href="#"><i class="bx bxl-linkedin"></i></a>
+                    <a href="#" <i class="bx bxl-twitter"></i></a>
+                    <a href="#" <i class="bx bxl-facebook"></i></a>
+                    <a href="#" <i class="bx bxl-instagram"></i></a>
+                </div>
+            </article>
+        </div>
+        <div class="copyright">
+            Copyright Maternal health care. All Rights Reserved.
+        </div>
+    </footer>
+    <!-- ======================== END OF FOOTER =============================== -->
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Main JS -->
+    <script src="main.js"></script>
+    <script>
+        function fetchFinanceUsers() {
+            fetch('http://localhost:5000/finance') // Replace with your API endpoint
+                .then(response => response.json())
+                .then(data => {
+                    const tableBody = document.getElementById('financeTableBody');
+                    tableBody.innerHTML = ''; // Clear the table body before populating
+
+                    data.forEach((user, index) => {
+                        const row = document.createElement('tr');
+                        row.innerHTML = `
+                        <td>${index + 1}</td>
+                        <td>${user.name}</td>
+                        <td>${user.email}</td>
+                        <td>${user.phone}</td>
+                        <td>${user.address}</td>
+                        <td>
+                            $19,000
+                        </td>
+                    `;
+                        tableBody.appendChild(row);
+                    });
+                })
+                .catch(error => console.error('Error:', error));
+        }
+
+        // Call the function to fetch and populate the table on page load
+        fetchFinanceUsers();
+    </script>
+</body>
+
+</html>

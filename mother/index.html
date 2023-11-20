@@ -1,0 +1,187 @@
+<script>
+    const userid = sessionStorage.getItem("id");
+    if (!userid) {
+        alert("Please login to continue..")
+        window.location.href = "/login.html";
+    }
+</script>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="logo.png" alt="Logo" width="40" height="40" class="d-inline-block align-top">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item ">
+                        <a class="nav-link text-light" href="./home.php">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="./bookings.php">Appointments</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="./schedule.php">Book</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#" id="prescription">Prescriptions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="./profile.php">Profile</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-light" id="loginLink" href="./">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" id="logoutLink" href="#">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-3 mb-2">
+                <div class="card bg-primary text-white">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-user"></i> Profile</h5>
+                        <p class="card-text">View and update your profile information.</p>
+                        <a href="./profile.html" class="btn btn-light">Go to Profile</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-2">
+                <div class="card bg-success text-white">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-calendar-check"></i> Pending Requests</h5>
+                        <p class="card-text">Manage your appointments and view upcoming ones.</p>
+                        <a href="./requests.html" class="btn btn-light">Go to Appointments</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-2">
+                <div class="card bg-info text-white">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-book"></i> New Request</h5>
+                        <p class="card-text">Book appointments with healthcare providers.</p>
+                        <a href="./request.html" class="btn btn-light">Go to Booking</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-2">
+                <div class="card bg-warning text-white">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-clock"></i> Schedule</h5>
+                        <p class="card-text">Give us Feedback and suggestion to grow more</p>
+                        <a href="./schedule.html" class="btn btn-light">Go to Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-6 mb-2">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Latest News & Announcements</h5>
+                        <marquee behavior="scroll" id="marquee" direction="up" scrollamount="3" style="height: 200px;">
+                            <!--read the data from event.txt using html & js-->
+                        </marquee>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Feedback Form</h5>
+                        <form>
+                            <div class="mb-3">
+                                <label for="username" class="form-label">Username</label>
+                                <input type="text" class="form-control" id="username" name="username">
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" name="email">
+                            </div>
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">Subject</label>
+                                <input type="text" class="form-control" id="subject" name="subject">
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" id="message" name="message" rows="4"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script>
+        var marquee = document.getElementById('marquee');
+
+        // Pause scrolling on hover
+        marquee.addEventListener('mouseover', function () {
+            this.stop();
+        });
+
+        // Resume scrolling when not hovering
+        marquee.addEventListener('mouseout', function () {
+            this.start();
+        });
+
+        fetch('event.txt')
+            .then(response => response.text()) // Read the response as text
+            .then(data => {
+                const lines = data.split('..'); // Split text by newline character
+                lines.forEach(line => {
+                    const p = document.createElement('p');
+                    p.textContent = line.trim(); // Set text content for each line
+                    marquee.appendChild(p);
+                });
+            })
+            .catch(error => console.error('Error:', error));
+    </script>
+    <script>
+        const loginLink = document.getElementById('loginLink');
+        const logoutLink = document.getElementById('logoutLink');
+        const prescriptionLink = document.getElementById('prescription');
+
+        if (userid) {
+            loginLink.style.display = 'none';
+        } else {
+            logoutLink.style.display = 'none';
+        }
+
+        logoutLink.addEventListener('click', () => {
+            sessionStorage.removeItem('id');
+            sessionStorage.removeItem('role');
+            window.location.href = '/';
+        });
+
+    </script>
+</body>
+
+</html>

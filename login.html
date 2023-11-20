@@ -1,0 +1,93 @@
+<html>
+
+<head>
+    <title>Registration Page Design</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body>
+    <form method="POST" id="loginForm">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 offset=md-1">
+                    <div class="row">
+                        <div class="col-md-5 register-left">
+
+                            <h3> Join Us </h3>
+                            <p> Register in our webpage to get usefull information Related to Maternal health </p>
+                            <button type="button" class="btn btn-primary" onclick="gotoRegister()">Register</button>
+
+                        </div>
+                        <div class="col-md-7 register-right">
+                            <h2> Login Here </h2>
+                            <div class="register-form">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="email" placeholder="Email" required>
+                                </div>
+                                <div class="form-group">
+                                    <select class="form-control" name="role" id="signupRole">
+                                        <option value="">Select your role</option>
+                                        <option value="mother">Mother</option>
+                                        <option value="healthcare">Healthcare Professional</option>
+                                        <option value="financial">Financial Supporter</option>
+                                        <option value="education">Education Facilitator</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control" name="password" placeholder="Password">
+                                </div>
+                                <input type="submit" value="Login" class=" btn btn-primary" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <script>
+        function gotoRegister() {
+            window.location.href = "register.html";
+        }
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.querySelector('form');
+
+            form.addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                fetch('http://localhost:5000/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        email: form.email.value,
+                        role: form.role.value,
+                        password: form.password.value
+                    })
+                })
+                    .then(response => {
+                        if (response.ok) {
+                            return response.json();
+                        }
+                        throw new Error('Login failed');
+                    })
+                    .then(data => {
+                        alert("Logged in successfully");
+                        sessionStorage.setItem('id', data.id);
+                        sessionStorage.setItem('role', data.role);
+                        window.location.href = `http://127.0.0.1:5500${data.redirect}`;
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        if (error.message === 'Login failed') {
+                            alert('Login failed. Please try again.');
+                        }
+                    });
+            });
+        });
+
+    </script>
+</body>
+
+</html>
